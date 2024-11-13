@@ -1,0 +1,244 @@
+.misc {
+  padding: 80px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-image: linear-gradient(-45deg, #f6f5f7 0%, #f6f5f7 25%,
+                                                                #f3f1f4 25%, #f3f1f4 50%,
+                                                                #f6f5f7 50%, #f6f5f7 75%,
+                                                                #f3f1f4 75%, #f3f1f4 100%);
+  background-size: 16px 16px;
+  background-repeat: repeat;
+
+  .content {
+    margin: 0 10px;
+    display: flex;
+    max-width: 1000px;
+    background-color: #f2f1f4;
+    box-shadow: 0 0 2px 4px #ebeaec;
+    border-radius: 10px;
+    overflow: hidden;
+
+    &:first-child {
+      margin-bottom: 80px;
+    }
+
+
+    @media screen and (max-width: 905px) {
+      & {
+        flex-wrap: wrap;
+
+        &>div {
+          width: 100% !important;
+        }
+
+        .card {
+          .logo {
+            display: none;
+          }
+
+          .cards {
+            width: 100%;
+            justify-content: center;
+
+            img {
+              min-width: 150px;
+              width: 30%;
+            }
+          }
+        }
+      }
+    }
+
+    &>.main {
+      display: flex;
+      //align-items: center;
+      flex-direction: column;
+      background-color: white;
+      overflow: hidden;
+
+      .text {
+        padding: 40px;
+        p {
+          margin-top: 20px;
+          font-size: 16px;
+
+          &.ps {
+            opacity: 0.5;
+          }
+        }
+      }
+
+      .game {
+        align-self: center;
+        display: flex;
+        flex-direction: column;
+        width: 90%;
+        aspect-ratio: 16 / 9;
+
+        @media screen and (max-width: 505px) {
+          width: 100%;
+        }
+
+        .area {
+          height: 48px;
+
+          .cat {
+            width: 48px;
+            height: 50px;
+          }
+        }
+
+        .board {
+          flex: 1;
+          padding: 2px;
+          padding-bottom: 0;
+          border-radius: 20px 20px 0 0;
+          border: 2px solid black;
+          background-color: white;
+          overflow: hidden;
+          box-sizing: border-box;
+
+          .body {
+            padding: 0 8%;
+            height: 100%;
+            border: 2px solid black;
+            border-radius: 20px 20px 0 0;
+            background-color: black;
+            box-sizing: border-box;
+            overflow: hidden;
+
+            .main {
+              display: flex;
+              flex-direction: column;
+              height: 100%;
+              background-color: white;
+
+              span {
+                display: inline-block;
+                border: 2px solid black;
+                border-radius: 4px;
+              }
+
+              .connection {
+                padding: 5px 0;
+                text-align: center;
+                font-weight: bold;
+                font-size: 18px;
+              }
+
+              .controller {
+                flex: 1;
+                display: flex;
+                justify-content: space-between;
+
+                &>div {
+                  flex: 1;
+                  display: flex;
+                  flex-direction: column;
+                  height: 100%;
+                }
+
+                .awsd {
+                  p {
+                    flex: 1;
+                    display: flex;
+                    justify-content: center;
+
+                    span {
+                      aspect-ratio: 1 / 1;
+                      opacity: 0;
+
+
+                      &.btn {
+                        opacity: 1;
+
+                        &:active {
+                          background-color: skyblue;
+                        }
+                      }
+                    }
+                  }
+                }
+
+                .jump {
+                  flex-direction: row;
+                  justify-content: center;
+                  align-items: center;
+
+                  span {
+                    height: 80%;
+                    aspect-ratio: 1 / 3;
+
+                    & +span {
+                      margin-left: 10px;
+                    }
+
+                    &.btn {
+                      opacity: 1;
+
+                      &:active {
+                        background-color: skyblue;
+                      }
+                    }
+                  }
+                }
+
+              }
+
+              .shot {
+                padding: 2% 0;
+                height: 15%;
+                text-align: center;
+
+                span {
+                  width: 20%;
+                  height: 60%;
+
+                  &:active {
+                    background-color: skyblue;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+
+      .display {
+        align-self: normal;
+        margin: 0 40px 40px 40px;
+        height: 250px;
+        background-color: #dddddd;
+        border: 1px solid black;
+      }
+    }
+
+    .card {
+      display: flex;
+      flex-wrap: wrap;
+      align-content: space-between;
+      width: 160px;
+      text-align: center;
+      padding: 40px;
+
+      .logo {
+        margin-bottom: 80px;
+      }
+
+      a +a img {
+        margin-top: 5px;
+      }
+
+      .cards img {
+        box-shadow: 0 0 2px 2px #a6a6a6;
+        border-radius: 5px;
+        box-sizing: border-box;
+      }
+
+      img {
+        width: 100%;
+      }
+    }
+  }
+}

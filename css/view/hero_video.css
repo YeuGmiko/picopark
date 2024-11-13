@@ -1,0 +1,7 @@
+.hero_video {
+  padding: 0 10px;
+  background-color: #ff854d;
+}
+.hero_video video {
+  width: 100%;
+}

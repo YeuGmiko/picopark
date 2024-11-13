@@ -1,0 +1,20 @@
+.title_image {
+  background-color: black;
+  color: transparent !important;
+  background-image: url("../static/assets/imgs/title-pattern.svg");
+  background-size: auto 100px;
+  background-repeat: repeat;
+  background-position: center;
+  background-clip: text !important;
+  font-size: 32px;
+  font-weight: bold;
+  text-shadow: 3px 3px 2px rgba(0, 0, 0, 0.2);
+}
+@supports not (background-clip: text) {
+  .title_image {
+    color: black !important;
+    font-size: 32px;
+    font-weight: bold;
+    background: none !important;
+  }
+}

@@ -1,0 +1,196 @@
+.misc {
+  padding: 80px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-image: linear-gradient(-45deg, #f6f5f7 0%, #f6f5f7 25%, #f3f1f4 25%, #f3f1f4 50%, #f6f5f7 50%, #f6f5f7 75%, #f3f1f4 75%, #f3f1f4 100%);
+  background-size: 16px 16px;
+  background-repeat: repeat;
+}
+.misc .content {
+  margin: 0 10px;
+  display: flex;
+  max-width: 1000px;
+  background-color: #f2f1f4;
+  box-shadow: 0 0 2px 4px #ebeaec;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.misc .content:first-child {
+  margin-bottom: 80px;
+}
+@media screen and (max-width: 905px) {
+  .misc .content {
+    flex-wrap: wrap;
+  }
+  .misc .content > div {
+    width: 100% !important;
+  }
+  .misc .content .card .logo {
+    display: none;
+  }
+  .misc .content .card .cards {
+    width: 100%;
+    justify-content: center;
+  }
+  .misc .content .card .cards img {
+    min-width: 150px;
+    width: 30%;
+  }
+}
+.misc .content > .main {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  overflow: hidden;
+}
+.misc .content > .main .text {
+  padding: 40px;
+}
+.misc .content > .main .text p {
+  margin-top: 20px;
+  font-size: 16px;
+}
+.misc .content > .main .text p.ps {
+  opacity: 0.5;
+}
+.misc .content > .main .game {
+  align-self: center;
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  aspect-ratio: 16 / 9;
+}
+@media screen and (max-width: 505px) {
+  .misc .content > .main .game {
+    width: 100%;
+  }
+}
+.misc .content > .main .game .area {
+  height: 48px;
+}
+.misc .content > .main .game .area .cat {
+  width: 48px;
+  height: 50px;
+}
+.misc .content > .main .game .board {
+  flex: 1;
+  padding: 2px;
+  padding-bottom: 0;
+  border-radius: 20px 20px 0 0;
+  border: 2px solid black;
+  background-color: white;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+.misc .content > .main .game .board .body {
+  padding: 0 8%;
+  height: 100%;
+  border: 2px solid black;
+  border-radius: 20px 20px 0 0;
+  background-color: black;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+.misc .content > .main .game .board .body .main {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  background-color: white;
+}
+.misc .content > .main .game .board .body .main span {
+  display: inline-block;
+  border: 2px solid black;
+  border-radius: 4px;
+}
+.misc .content > .main .game .board .body .main .connection {
+  padding: 5px 0;
+  text-align: center;
+  font-weight: bold;
+  font-size: 18px;
+}
+.misc .content > .main .game .board .body .main .controller {
+  flex: 1;
+  display: flex;
+  justify-content: space-between;
+}
+.misc .content > .main .game .board .body .main .controller > div {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+.misc .content > .main .game .board .body .main .controller .awsd p {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+.misc .content > .main .game .board .body .main .controller .awsd p span {
+  aspect-ratio: 1 / 1;
+  opacity: 0;
+}
+.misc .content > .main .game .board .body .main .controller .awsd p span.btn {
+  opacity: 1;
+}
+.misc .content > .main .game .board .body .main .controller .awsd p span.btn:active {
+  background-color: skyblue;
+}
+.misc .content > .main .game .board .body .main .controller .jump {
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.misc .content > .main .game .board .body .main .controller .jump span {
+  height: 80%;
+  aspect-ratio: 1 / 3;
+}
+.misc .content > .main .game .board .body .main .controller .jump span + span {
+  margin-left: 10px;
+}
+.misc .content > .main .game .board .body .main .controller .jump span.btn {
+  opacity: 1;
+}
+.misc .content > .main .game .board .body .main .controller .jump span.btn:active {
+  background-color: skyblue;
+}
+.misc .content > .main .game .board .body .main .shot {
+  padding: 2% 0;
+  height: 15%;
+  text-align: center;
+}
+.misc .content > .main .game .board .body .main .shot span {
+  width: 20%;
+  height: 60%;
+}
+.misc .content > .main .game .board .body .main .shot span:active {
+  background-color: skyblue;
+}
+.misc .content > .main .display {
+  align-self: normal;
+  margin: 0 40px 40px 40px;
+  height: 250px;
+  background-color: #dddddd;
+  border: 1px solid black;
+}
+.misc .content .card {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: space-between;
+  width: 160px;
+  text-align: center;
+  padding: 40px;
+}
+.misc .content .card .logo {
+  margin-bottom: 80px;
+}
+.misc .content .card a + a img {
+  margin-top: 5px;
+}
+.misc .content .card .cards img {
+  box-shadow: 0 0 2px 2px #a6a6a6;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+.misc .content .card img {
+  width: 100%;
+}

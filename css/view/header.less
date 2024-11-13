@@ -1,0 +1,45 @@
+header {
+  display: flex;
+  height: 30px;
+  padding: 20px;
+  justify-content: space-between;
+  background-color: #ff854d;
+
+  .logo {
+    height: 100%;
+  }
+
+  .menu {
+    white-space: nowrap;
+    a {
+      display: inline-block;
+      margin: 0 10px;
+      padding: 5px 10px;
+      text-decoration: none;
+      color: white;
+      font-size: 14px;
+      font-weight: bold;
+      border: 2px solid white;
+      border-radius: 20px;
+
+      @media screen and (max-width: 500px) {
+        & {
+          margin: 0 2px;
+        }
+        .move {
+          display: inline-block !important;
+        }
+        .desk {
+          display: none;
+        }
+      }
+      .move {
+        display: none;
+      }
+    }
+    a.current {
+      color: #ff854d;
+      background-color: white;
+    }
+  }
+}

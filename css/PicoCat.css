@@ -1,0 +1,114 @@
+.cat.purple .body {
+  background-image: url("../static/assets/imgs/picocat/purple.png");
+}
+.cat.orange .body {
+  background-image: url("../static/assets/imgs/picocat/orange.png");
+}
+.cat.yellow .body {
+  background-image: url("../static/assets/imgs/picocat/yellow.png");
+}
+.cat.blue .body {
+  background-image: url("../static/assets/imgs/picocat/blue.png");
+}
+.cat.red .body {
+  background-image: url("../static/assets/imgs/picocat/red.png");
+}
+.cat.green .body {
+  background-image: url("../static/assets/imgs/picocat/green.png");
+}
+.cat.pink .body {
+  background-image: url("../static/assets/imgs/picocat/pink.png");
+}
+.cat.gray .body {
+  background-image: url("../static/assets/imgs/picocat/gray.png");
+}
+.cat .body {
+  width: 40px;
+  height: 48px;
+  background-size: 464px 98px;
+  animation: paused;
+}
+/*42px 50px*/
+.cat.left .body {
+  background-position: 0 48px;
+}
+.cat.left.run .body {
+  animation: moveLeft 2s infinite steps(1);
+}
+.cat.left.jump .body,
+.cat.left.run.jump .body {
+  background-position: 84px 48px;
+  animation: paused;
+}
+.cat.jump {
+  animation: jumping 0.6s;
+}
+/*42px 0*/
+.cat.right .body {
+  background-position: 0 0;
+}
+.cat.right.run .body {
+  animation: moveRight 2s infinite steps(1);
+}
+.cat.right.jump .body,
+.cat.right.run.jump .body {
+  background-position: 84px 0;
+  animation: paused;
+}
+@keyframes moveLeft {
+  0% {
+    background-position: -126px 48px;
+  }
+  16.6% {
+    background-position: -168px 48px;
+  }
+  33.3% {
+    background-position: -210px 48px;
+  }
+  50% {
+    background-position: -84px 48px;
+  }
+  66.4% {
+    background-position: -210px 48px;
+  }
+  83.3% {
+    background-position: -168px 48px;
+  }
+  100% {
+    background-position: -126px 48px;
+  }
+}
+@keyframes moveRight {
+  0% {
+    background-position: -126px 0;
+  }
+  16.6% {
+    background-position: -168px 0;
+  }
+  33.3% {
+    background-position: -210px 0;
+  }
+  50% {
+    background-position: -84px 0;
+  }
+  66.4% {
+    background-position: -210px 0;
+  }
+  83.3% {
+    background-position: -168px 0;
+  }
+  100% {
+    background-position: -126px 0;
+  }
+}
+@keyframes jumping {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-100px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}

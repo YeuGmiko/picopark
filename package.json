@@ -1,0 +1,15 @@
+{
+  "dependencies": {
+    "less-watch-compiler": "^1.16.3",
+    "typescript": "^5.5.2"
+  },
+  "scripts": {
+    "tsc-W": "tsc -w",
+    "http-server": "http-server -p 80",
+    "less-watch": "less-watch-compiler ./css ./css",
+    "start": "npm run http-server & npm run less-watch & npm run tsc-w"
+  },
+  "devDependencies": {
+    "less": "^4.2.0"
+  }
+}

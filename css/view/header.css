@@ -1,0 +1,42 @@
+header {
+  display: flex;
+  height: 30px;
+  padding: 20px;
+  justify-content: space-between;
+  background-color: #ff854d;
+}
+header .logo {
+  height: 100%;
+}
+header .menu {
+  white-space: nowrap;
+}
+header .menu a {
+  display: inline-block;
+  margin: 0 10px;
+  padding: 5px 10px;
+  text-decoration: none;
+  color: white;
+  font-size: 14px;
+  font-weight: bold;
+  border: 2px solid white;
+  border-radius: 20px;
+}
+@media screen and (max-width: 500px) {
+  header .menu a {
+    margin: 0 2px;
+  }
+  header .menu a .move {
+    display: inline-block !important;
+  }
+  header .menu a .desk {
+    display: none;
+  }
+}
+header .menu a .move {
+  display: none;
+}
+header .menu a.current {
+  color: #ff854d;
+  background-color: white;
+}

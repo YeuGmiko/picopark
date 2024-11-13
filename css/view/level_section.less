@@ -1,0 +1,144 @@
+section.level_section {
+  padding: 70px 0;
+  background-image: url("../../static/assets/imgs/bg-cat.png");
+  background-size: 150px 96px;
+  background-repeat: repeat;
+  animation: bk_loop 5s linear infinite;
+
+  @media screen and (max-width: 650px) {
+    .content .text.desk {
+      display: none;
+    }
+    .content .text.move {
+      display: block !important;
+    }
+  }
+  @media screen and (max-width: 500px) {
+    .choose .desk {
+      display: none;
+    }
+  }
+
+  .content {
+    position: relative;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    max-width: 650px;
+
+    .text.desk {
+      position: absolute;
+      top: -80px;
+      left: -35px;
+      padding: 20px 40px;
+      background-color: #ff854d;
+      border-radius: 10px;
+      font-weight: bold;
+      color: white;
+      box-shadow: 2px 2px 1px 0px rgba(0, 0, 0, 0.2);
+    }
+
+    .text.move {
+      padding: 0 40px;
+      display: none;
+
+      .title {
+        text-align: center;
+        font-size: 32px;
+        font-weight: bold;
+        background-image: url("../../static/assets/imgs/title-pattern.svg");
+        background-size: auto 100px;
+        background-clip: text;
+        background-color: black;
+        background-repeat: repeat;
+        background-position: center;
+        color: transparent;
+      }
+
+      .desc {
+        margin: 40px 0;
+        font-size: 16px;
+        font-weight: lighter;
+        line-height: 1.5em;
+        text-align: left;
+      }
+    }
+
+    .body {
+      margin: 0 2%;
+      width: 96%;
+      height: 400px;
+      border: 3px solid #ff854d;
+      border-radius: 10px;
+      background-color: white;
+      box-sizing: border-box;
+
+      @media screen and (max-width: 650px) {
+        & {
+          height: 50vw !important;
+        }
+      }
+    }
+
+    .levels {
+      position: relative;
+      margin: 25px 10px 0;
+      display: flex;
+      height: 50px;
+      border-radius: 25px;
+      background-color: #fff0db;
+      overflow: hidden;
+
+      .choose {
+        flex: 1;
+        position: relative;
+        text-align: center;
+        line-height: 50px;
+        color: #ff854d;
+        font-weight: bold;
+        transition: color 0.3s ease-in-out;
+        cursor: pointer;
+        z-index: 0;
+
+
+
+        &:hover {
+          background-color: #ffe6cd;
+        }
+        &.active {
+          color: white;
+          &:hover {
+            background-color: transparent;
+          }
+        }
+      }
+
+      .split {
+        position: relative;
+        width: 4px;
+        background-color: white;
+        z-index: 2;
+      }
+
+      .float {
+        position: absolute;
+        width: 33.3%;
+        left: 0;
+        height: 100%;
+        background-color: #ff854d;
+        transition: left 0.5s ease-in-out;
+      }
+
+    }
+  }
+}
+
+
+@keyframes bk_loop {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 150px -96px;
+  }
+}

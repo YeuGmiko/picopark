@@ -1,0 +1,9 @@
+{
+  "compilerOptions": {
+    "target": "ES6",
+    "module": "ES6",
+    "outDir": "./js",
+    "incremental": true,  // TS编译缓存
+    "removeComments": true, // 删除注释
+  },
+}
